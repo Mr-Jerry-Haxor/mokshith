@@ -236,7 +236,7 @@ def reports():
   
 @app.route('/')
 def home():
-    return jsonify({"msg": "Welcome to P75 Backend!"})
+    return jsonify({"msg": "Welcome to M87 Backend!"})
 
 # Admin Routes
 @app.route('/admin/contents/<page_type>', methods=['GET'])

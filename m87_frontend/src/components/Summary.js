@@ -19,7 +19,7 @@ function Summary() {
         return;
       }
       try {
-        const response = await axios.get('https://poojithabackend.devhost.my/summary', {
+        const response = await axios.get('https://mokshithbackend.devhost.my/summary', {
           headers: { Authorization: `Bearer ${token}` }
         });
         console.log('API Response:', response.data); // Debug log
