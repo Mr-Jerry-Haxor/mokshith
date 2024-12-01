@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory  } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import './css/Login.css';
@@ -44,37 +44,37 @@ function Login({ setToken }) {
 
   return (
     <div className="login-page">
-    <div className="login-container">
-      <h2 className="login-title">Login</h2>
-      <form onSubmit={handleSubmit} className="login-form" aria-label="Login Form">
-        <div className="form-group">
-          <label htmlFor="username">Username:</label>
-          <input 
-            type="text" 
-            id="username" 
-            value={username} 
-            onChange={(e) => setUsername(e.target.value)} 
-            required 
-            aria-required="true"
-            aria-label="Username"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
-          <input 
-            type="password" 
-            id="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-            aria-required="true"
-            aria-label="Password"
-          />
-        </div>
-        <button type="submit" className="login-button" aria-label="Login">Login</button>
-      </form>
-      {error && <p className="error-message" role="alert">{error}</p>}
-    </div>
+      <div className="login-container">
+        <h4 className="login-title">Are you ready to get started? Then Login</h4>
+        <form onSubmit={handleSubmit} className="login-form" aria-label="Login Form">
+          <div className="form-group">
+            <label htmlFor="username">Username:</label>
+            <input 
+              type="text" 
+              id="username" 
+              value={username} 
+              onChange={(e) => setUsername(e.target.value)} 
+              required 
+              aria-required="true"
+              aria-label="Username"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input 
+              type="password" 
+              id="password" 
+              value={password} 
+              onChange={(e) => setPassword(e.target.value)} 
+              required 
+              aria-required="true"
+              aria-label="Password"
+            />
+          </div>
+          <button type="submit" className="login-button" aria-label="Login">Login</button>
+        </form>
+        {error && <p className="error-message" role="alert">{error}</p>}
+      </div>
     </div>
   );
 }
